@@ -19,7 +19,7 @@ public class OrderCreatingTest extends BaseUser {
         //Создание и логин в систему
 
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         UserClientLogin userClientLogin = new UserClientLogin();
         Response response_1 = userClientLogin.Login(user);
@@ -44,7 +44,7 @@ public class OrderCreatingTest extends BaseUser {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_3 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
     }
 
 
@@ -55,7 +55,7 @@ public class OrderCreatingTest extends BaseUser {
 
 
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         UserClientLogin userClientLogin = new UserClientLogin();
         Response response_1 = userClientLogin.Login(user);
@@ -80,7 +80,7 @@ public class OrderCreatingTest extends BaseUser {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_3 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
     }
 
 
@@ -140,7 +140,7 @@ public class OrderCreatingTest extends BaseUser {
     public void getOrderWithAuthorization() {
         //Создание пользователя
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         UserClientLogin userClientLogin = new UserClientLogin();
         Response response_1 = userClientLogin.Login(user);
@@ -151,7 +151,7 @@ public class OrderCreatingTest extends BaseUser {
         OrderDTO order = new OrderDTO(ingredientsOrder);
 
         OrderClientCreating orderClientCreating = new OrderClientCreating();
-        Response response_2 = orderClientCreating.CreatingOrder(order);
+        orderClientCreating.CreatingOrder(order);
         //--------------------------------------------------------------------------------------------------------------
         //Десериализация
         UserResponse userResponse = response_1.as(UserResponse.class);
@@ -169,7 +169,8 @@ public class OrderCreatingTest extends BaseUser {
         //-------------------------------------------------------------------------------------------------------------
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_4 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
+
     }
 
 
@@ -181,8 +182,6 @@ public class OrderCreatingTest extends BaseUser {
         OrderDTO order = new OrderDTO(ingredientsOrder);
 
         OrderClientCreating orderClientCreating = new OrderClientCreating();
-        Response response_2 = orderClientCreating.CreatingOrder(order);
-
 
         Response response_3 = orderClientCreating.GetOrdersWithoutAccessToken(order);
 

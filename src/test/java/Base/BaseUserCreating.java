@@ -28,7 +28,7 @@ public class BaseUserCreating {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_1 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
 
     }
 

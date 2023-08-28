@@ -29,6 +29,6 @@ public class UserLoginTest extends BaseUserLogin {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_1 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
     }
 }

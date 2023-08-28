@@ -31,12 +31,13 @@ public class UserCreatingTest extends BaseUserCreating {
 
 
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         UserClientCreating userClientCreating_1 = new UserClientCreating();
-        Response response_1 = userClientCreating.Creating(user);
 
-        response_1.then().assertThat().statusCode(403)
+        Response response = userClientCreating_1.Creating(user);
+
+        response.then().assertThat().statusCode(403)
                 .and()
                 .assertThat().body("success", equalTo(false))
                 .and()

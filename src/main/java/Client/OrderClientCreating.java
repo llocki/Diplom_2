@@ -1,7 +1,6 @@
 package Client;
 
 import DTO.OrderDTO;
-import DTO.UserDTO;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 

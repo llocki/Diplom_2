@@ -17,7 +17,7 @@ public class UserChangeTest extends BaseUser {
 
         //Создание пользователя
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         //Авторизация пользователя
         UserClientLogin userClientLogin = new UserClientLogin();
@@ -38,7 +38,7 @@ public class UserChangeTest extends BaseUser {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_3 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
 
     }
 
@@ -48,7 +48,7 @@ public class UserChangeTest extends BaseUser {
 
         //Создание пользователя
         UserClientCreating userClientCreating = new UserClientCreating();
-        Response response = userClientCreating.Creating(user);
+        userClientCreating.Creating(user);
 
         //Авторизация пользователя
         UserClientLogin userClientLogin = new UserClientLogin();
@@ -69,7 +69,7 @@ public class UserChangeTest extends BaseUser {
 
         //Удаление пользователя
         UserClientDeleted userClientDeleted = new UserClientDeleted();
-        Response response_3 = userClientDeleted.Delete(accessToken);
+        userClientDeleted.Delete(accessToken);
     }
 
     @Test
